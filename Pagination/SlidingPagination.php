@@ -8,13 +8,11 @@ class SlidingPagination extends AbstractPagination
 {
     private $route;
     private $params;
-    private $engine;
     private $pageRange = 5;
     private $template;
     private $sortableTemplate;
     private $extraViewParams = array();
 
-    // EngineInterface $engine,
     public function __construct(array $params)
     {
         $this->params = $params;
