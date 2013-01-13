@@ -33,6 +33,11 @@ class SlidingPagination extends AbstractPagination
         $this->sortableTemplate = $template;
     }
 
+    public function getSortableTemplate()
+    {
+        return $this->sortableTemplate;
+    }
+
     public function setParam($name, $value)
     {
         $this->params[$name] = $value;

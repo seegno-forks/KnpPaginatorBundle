@@ -136,9 +136,9 @@ class PaginationExtension extends \Twig_Extension
 
         unset($options['absolute'], $options['translationDomain'], $options['translationParameters']);
 
-        return $this->environment->render($pagination->getSortableTemplate, array_merge(
-            $pagination->getPaginatorOptions,
-            $pagination->getCustomParameters,
+        return $this->environment->render($pagination->getSortableTemplate(), array_merge(
+            $pagination->getPaginatorOptions(),
+            $pagination->getCustomParameters(),
             compact('options', 'title', 'direction', 'sorted', 'key')
         ));
     }
